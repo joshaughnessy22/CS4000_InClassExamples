@@ -2,7 +2,7 @@ CXX=g++
 # standard flags
 CPPFLAGS=-Wall -Werror
 # turn on the openmp compiler options for class
-CPPFLAGS+= -fopenmp 
+CPPFLAGS+= -pthreads
 
 # CCFILES is a listing of all of the files in the current directory that are C++ source files
 CCFILES=${wildcard *.cc}
