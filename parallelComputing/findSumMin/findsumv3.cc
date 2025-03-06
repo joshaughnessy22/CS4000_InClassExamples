@@ -53,8 +53,7 @@ int main(int argc, char *argv[])
     chrono::time_point<chrono::system_clock> start;
     start = chrono::system_clock::now(); // Start the system clock.
     sum_g = 0;
-#pragma omp parallel num_threads(numthreads)
-#pragma omp critical
+#pragma omp parallel reduction(+ : sum_g) num_threads(numthreads)
     sum_g += find_sum(vals);
     // just timing code...
     chrono::time_point<chrono::system_clock> end;

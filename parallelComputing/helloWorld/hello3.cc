@@ -4,13 +4,15 @@
 #include <omp.h>
 #include <iostream>
 using namespace std;
-void Test() {
-printf("Hello from thread %3d of %3d\n",
-omp_get_thread_num(),omp_get_num_threads());
+void Test()
+{
+    printf("Hello from thread %3d of %3d\n",
+           omp_get_thread_num(), omp_get_num_threads());
 }
-int main() {
+int main()
+{
 #pragma omp parallel num_threads(20)
-Test();
+    Test();
 }
 
 /**

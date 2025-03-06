@@ -4,15 +4,17 @@
 #include <omp.h>
 #include <iostream>
 using namespace std;
-void Test() {
-printf("Hello from thread %d of %d\n",
-omp_get_thread_num(),omp_get_num_threads());
+void Test()
+{
+        printf("Hello from thread %d of %d\n",
+               omp_get_thread_num(), omp_get_num_threads());
 }
-int main() {
+int main()
+{
 #pragma omp parallel
-Test();
+        Test();
 }
 
 /**
-issue: no issue, but it is impossible to predict which 
+issue: no issue, but it is impossible to predict which
         threads will be output in what order */
