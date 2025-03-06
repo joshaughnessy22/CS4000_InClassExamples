@@ -46,6 +46,7 @@ int main(int argc, char *argv[])
     }
     // Create a critical section with default (NULL) attributes int return_code;
     pthread_mutex_init(&mymutex, NULL);
+    pthread_barrier_init(&mybarrier, NULL, num_threads);
     thread_array = new pthread_t[num_threads];
     for (long i = 0; i < num_threads; i++)
     {

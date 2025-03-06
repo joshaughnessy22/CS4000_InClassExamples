@@ -23,7 +23,9 @@ void Thread()
     {
         // Unlock all of the rest of the threads waiting to proceed
         omp_unset_lock(&barrier_mutex);
-        // cout << "Waking everybody..."; usleep(250000); cout << "done\n";
+        // cout << "Waking everybody..."; 
+        // usleep(250000); 
+        // cout << "done\n";
         for (int i = 0; i < num_threads; i++)
         {
             sem_post(&mysemaphore);
