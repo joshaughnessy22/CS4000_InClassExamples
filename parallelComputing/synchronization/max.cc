@@ -5,9 +5,10 @@
 #include <iostream>
 #include <thread>
 using namespace std;
-int main() {
-int n;
-n = thread::hardware_concurrency();
-cout << "Maximum number of threads (concurrency) = "
-<< n << endl;
+int main()
+{
+    int n;
+    n = thread::hardware_concurrency(); //how many cores are on your computer 
+    cout << "Maximum number of threads (concurrency) = "
+         << n << endl;
 }

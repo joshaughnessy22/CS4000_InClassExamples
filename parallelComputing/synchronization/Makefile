@@ -1,7 +1,7 @@
 # Generic C++ Threads Makefile
 # Ostermann - Feb 25, 2022 
 CXX=g++
-CPPFLAGS=-Wall -Werror -O2 -lpthread -pthread
+CPPFLAGS=-Wall -Werror -O2 -lpthread -pthread -fopenmp
 
 CSOURCES=${wildcard *.c}
 CCSOURCES=${wildcard *.cc}
